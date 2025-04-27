@@ -19,7 +19,7 @@ async function main() {
     if (isNaN(port)) {
       throw new Error("Invalid port number in config");
     }
-
+                            
     // Start the server
     server = app.listen(port, '0.0.0.0', () => {
       console.log(`🚀 Server running at http://${getLocalIp()}:${port}`);
