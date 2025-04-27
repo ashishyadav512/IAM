@@ -24,7 +24,7 @@ function main() {
             yield mongoose_1.default.connect(config_1.default.database_url);
             console.log('✅ MongoDB connected successfully');
             // Convert port to a number
-            const port = Number(config_1.default.port) || 5000;
+            const port = Number(config_1.default.port) || 5004;
             if (isNaN(port)) {
                 throw new Error("Invalid port number in config");
             }
