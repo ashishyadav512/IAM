@@ -4,10 +4,12 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import app from './app';
 import config from './config';
+import cors from 'cors';
 
 dotenv.config(); // ✅ Load environment variables
 
 let server: Server;
+app.use(cors());
 
 async function main() {
   try {
@@ -15,7 +17,7 @@ async function main() {
     console.log('✅ MongoDB connected successfully');
 
     // Convert port to a number
-    const port = Number(config.port) || 5004;
+    const port = Number(config.port) || 5003;
     if (isNaN(port)) {
       throw new Error("Invalid port number in config");
     }

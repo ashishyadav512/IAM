@@ -10,12 +10,7 @@ import globalErrorHandler from './middlewares/globalErrorhandler';
 const app: Application = express();
 
 // Allow frontend from any machine
-app.use(cors({
-  origin:   [
-    'http://localhost:5173','http://192.168.155.100:5173',
-  ],
-  credentials: true
-}));
+app.use(cors());
 
 
 app.use(express.json());
